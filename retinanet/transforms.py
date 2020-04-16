@@ -323,6 +323,7 @@ class ToTensor(object):
 
     def __call__(self, img, anno):
         img = self.transform(img)
+
         return img, anno
 
 class Compose(object):
