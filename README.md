@@ -21,6 +21,7 @@
     ```python
     broker_url = 'redis://:[REDIS_PASSWORD]@r-wz9j4vwobcb81ws9mapd.redis.rds.aliyuncs.com:6379/0'
     result_backend = 'redis://:[REDIS_PASSWORD]@r-wz9j4vwobcb81ws9mapd.redis.rds.aliyuncs.com:6379/0'
+    device_name = 'cpu' # or 'cuda:0' if you want to use gpu
     ```
 
     config.py:

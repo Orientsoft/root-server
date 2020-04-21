@@ -12,7 +12,6 @@ CONFIG_FILE = 'celery-config'
 
 DETECTION_MODEL_FILE = './data/detection_state_dict.pth'
 SCORE_MODEL_FILE = './data/score_state_dict.pth'
-DEVICE_NAME = 'cpu'
 
 src_bucket_name = 'root-ai-src'
 dest_bucket_name = 'root-ai-dest'
@@ -39,7 +38,7 @@ core = RootCore.RootCore(
     DETECTION_MODEL_FILE,
     SCORE_MODEL_FILE,
     '',
-    DEVICE_NAME
+    device_name
 )
 
 # low level api
