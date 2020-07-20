@@ -10,8 +10,8 @@ from core import RootCore
 # consts
 CONFIG_FILE = 'celery-config'
 
-DETECTION_MODEL_FILE = './data/detection_state_dict.pth'
-SCORE_MODEL_FILE = './data/score_state_dict.pth'
+DETECTION_MODEL_FILE = './data/detection_state_dict.pth' if det_model is None else det_model
+SCORE_MODEL_FILE = './data/score_state_dict.pth' if score_model is None else score_model
 
 src_bucket_name = 'root-ai-src'
 dest_bucket_name = 'root-ai-dest'
@@ -38,7 +38,10 @@ core = RootCore.RootCore(
     DETECTION_MODEL_FILE,
     SCORE_MODEL_FILE,
     '',
-    device_name
+    device_name,
+    backend=backend,
+    det_vino_device=det_vino_device,
+    score_vino_device=score_vino_device
 )
 
 # low level api
