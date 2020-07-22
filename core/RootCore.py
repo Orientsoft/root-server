@@ -98,10 +98,15 @@ class DetectionPostProcessor():
         if indices.shape[0] > 0:
             scores = scores[indices]
             scores_sort = np.argsort(-scores)[:MAX_DETECTIONS]
-
+            
             image_boxes = boxes[indices[scores_sort], :]
             image_scores = scores[scores_sort]
             image_labels = labels[indices[scores_sort]]
+            
+            if scores_sort.shape[0] == 1:
+                image_boxes = image_boxes.unsqueeze(0)
+                image_scores = image_scores.unsqueeze(0)
+                image_labels = image_labels.unsqueeze(0)
 
             image_detections = []
 
