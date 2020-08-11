@@ -1,0 +1,13 @@
+det_model = './data/det_net.xml'
+score_model = './data/score_net.xml'
+backend = 'openvino'
+device_name = 'cpu'
+det_vino_device = 'CPU'
+score_vino_device = 'CPU'
+MINIO_URL = '127.0.0.1:9000'
+MINIO_ACCESS = 'minio'
+MINIO_SECRET = 'd2VsY29tZTEK'
+MINIO_SECURE = False
+SRC_BUCKET = 'root-ai-src'
+DEST_BUCKET = 'root-ai-dest'
+EXPIRE = 600

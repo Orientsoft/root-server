@@ -10,7 +10,7 @@ test_loops = 10
 
 from openvino.inference_engine import IECore
 
-model_xml = 'score_net.xml'
+model_xml = './data/score_net.xml'
 model_bin = os.path.splitext(model_xml)[0] + '.bin'
 device = 'CPU'
 # device = 'MYRIAD'
