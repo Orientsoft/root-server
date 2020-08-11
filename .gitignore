@@ -2,6 +2,7 @@ celery-config.py
 config.py
 config-vino.py
 config.py.bak
+*.tgz
 
 data/
 result/
